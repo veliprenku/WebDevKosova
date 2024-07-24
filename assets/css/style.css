@@ -793,7 +793,7 @@ section {
 --------------------------------------------------------------*/
 .testimonials {
   padding: 60px 0;
-  background: url("../img/testimonials-bg.jpg") no-repeat;
+  background: url("../img/testimonials-bg.svg") no-repeat;
   background-position: center center;
   background-size: cover;
   position: relative;
@@ -879,41 +879,12 @@ section {
     width: 80%;
   }
 }
-
 /*--------------------------------------------------------------
-# Clients
+# Team
 --------------------------------------------------------------*/
-.clients {
-  background: whitesmoke;
-  padding: 15px 0;
-  text-align: center;
-}
-
-.clients img {
-  width: 50%;
-  filter: grayscale(100);
-  transition: all 0.4s ease-in-out;
-  display: inline-block;
-  padding: 15px 0;
-}
-
-.clients img:hover {
-  filter: none;
-  transform: scale(1.2);
-}
-
-@media (max-width: 768px) {
-  .clients img {
-    width: 40%;
-  }
-}
-
-@media (max-width: 575px) {
-  .clients img {
-    width: 50%;
-  }
-}
-
+/*--------------------------------------------------------------
+# Team
+--------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
@@ -925,22 +896,37 @@ section {
 .team .member {
   margin-bottom: 20px;
   overflow: hidden;
+  border-radius: 5px;
+  position: relative;
+  width: 100%; /* Ensure full width within the column */
+  max-width: 350px; /* Adjust this value as needed */
+  margin: auto; /* Center align the member card */
 }
 
 .team .member .member-img {
   position: relative;
   overflow: hidden;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team .member .member-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
 }
 
 .team .member .social {
   position: absolute;
   left: 0;
-  bottom: -40px;
+  bottom: 0;
   right: 0;
   height: 40px;
   opacity: 0;
-  transition: bottom ease-in-out 0.4s;
+  transition: bottom ease-in-out 0.4s, opacity ease-in-out 0.4s;
   background: rgba(124, 197, 118, 0.8);
   display: flex;
   align-items: center;
@@ -973,6 +959,7 @@ section {
   font-weight: 700;
   margin: 15px 0 5px 0;
   font-size: 18px;
+  text-align: center;
 }
 
 .team .member .member-info span {
@@ -982,6 +969,7 @@ section {
   font-weight: 400;
   margin-bottom: 15px;
   color: #7cc576;
+  text-align: center;
 }
 
 .team .member .member-info p {
@@ -989,13 +977,15 @@ section {
   font-size: 14px;
   line-height: 26px;
   color: #888888;
+  text-align: center;
 }
 
 .team .member:hover .social {
   bottom: 0;
   opacity: 1;
-  transition: bottom ease-in-out 0.4s;
+  transition: bottom ease-in-out 0.4s, opacity ease-in-out 0.4s;
 }
+
 /*--------------------------------------------------------------
 # Frequently Asked Questions
 --------------------------------------------------------------*/
@@ -1165,6 +1155,7 @@ section {
 
 .contact .php-email-form input {
   height: 44px;
+  padding: 10px 12px;
 }
 
 .contact .php-email-form textarea {
@@ -1244,7 +1235,6 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: url("../img/footer-bg.jpg") center center no-repeat;
   color: #fff;
   font-size: 14px;
   position: relative;
